@@ -307,7 +307,8 @@
     , s3logging :
         Optional
           ( List
-              { bucket_name : Text
+              { acl : Optional Text
+              , bucket_name : Text
               , compression_codec : Optional Text
               , domain : Optional Text
               , gzip_level : Optional Natural
@@ -633,7 +634,8 @@
   , s3logging =
       None
         ( List
-            { bucket_name : Text
+            { acl : Optional Text
+            , bucket_name : Text
             , compression_codec : Optional Text
             , domain : Optional Text
             , gzip_level : Optional Natural
