@@ -576,6 +576,14 @@
           )
     , vcl :
         Optional (List { content : Text, main : Optional Bool, name : Text })
+    , waf :
+        Optional
+          ( List
+              { prefetch_condition : Optional Text
+              , response_object : Text
+              , waf_id : Optional Text
+              }
+          )
     }
 , default =
   { activate = None Bool
@@ -1152,5 +1160,13 @@
             }
         )
   , vcl = None (List { content : Text, main : Optional Bool, name : Text })
+  , waf =
+      None
+        ( List
+            { prefetch_condition : Optional Text
+            , response_object : Text
+            , waf_id : Optional Text
+            }
+        )
   }
 }
