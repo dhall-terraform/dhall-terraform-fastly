@@ -353,12 +353,16 @@
     , logging_kafka :
         Optional
           ( List
-              { brokers : Text
+              { auth_method : Optional Text
+              , brokers : Text
               , compression_codec : Optional Text
               , format : Optional Text
               , format_version : Optional Natural
               , name : Text
+              , parse_log_keyvals : Optional Bool
+              , password : Optional Text
               , placement : Optional Text
+              , request_max_bytes : Optional Natural
               , required_acks : Optional Text
               , response_condition : Optional Text
               , tls_ca_cert : Optional Text
@@ -367,6 +371,7 @@
               , tls_hostname : Optional Text
               , topic : Text
               , use_tls : Optional Bool
+              , user : Optional Text
               }
           )
     , logging_kinesis :
@@ -953,12 +958,16 @@
   , logging_kafka =
       None
         ( List
-            { brokers : Text
+            { auth_method : Optional Text
+            , brokers : Text
             , compression_codec : Optional Text
             , format : Optional Text
             , format_version : Optional Natural
             , name : Text
+            , parse_log_keyvals : Optional Bool
+            , password : Optional Text
             , placement : Optional Text
+            , request_max_bytes : Optional Natural
             , required_acks : Optional Text
             , response_condition : Optional Text
             , tls_ca_cert : Optional Text
@@ -967,6 +976,7 @@
             , tls_hostname : Optional Text
             , topic : Text
             , use_tls : Optional Bool
+            , user : Optional Text
             }
         )
   , logging_kinesis =
