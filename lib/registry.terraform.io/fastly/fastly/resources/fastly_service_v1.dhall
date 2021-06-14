@@ -18,35 +18,33 @@
               }
           )
     , backend :
-        Optional
-          ( List
-              { address : Text
-              , auto_loadbalance : Optional Bool
-              , between_bytes_timeout : Optional Natural
-              , connect_timeout : Optional Natural
-              , error_threshold : Optional Natural
-              , first_byte_timeout : Optional Natural
-              , healthcheck : Optional Text
-              , max_conn : Optional Natural
-              , max_tls_version : Optional Text
-              , min_tls_version : Optional Text
-              , name : Text
-              , override_host : Optional Text
-              , port : Optional Natural
-              , request_condition : Optional Text
-              , shield : Optional Text
-              , ssl_ca_cert : Optional Text
-              , ssl_cert_hostname : Optional Text
-              , ssl_check_cert : Optional Bool
-              , ssl_ciphers : Optional Text
-              , ssl_client_cert : Optional Text
-              , ssl_client_key : Optional Text
-              , ssl_hostname : Optional Text
-              , ssl_sni_hostname : Optional Text
-              , use_ssl : Optional Bool
-              , weight : Optional Natural
-              }
-          )
+        List
+          { address : Text
+          , auto_loadbalance : Optional Bool
+          , between_bytes_timeout : Optional Natural
+          , connect_timeout : Optional Natural
+          , error_threshold : Optional Natural
+          , first_byte_timeout : Optional Natural
+          , healthcheck : Optional Text
+          , max_conn : Optional Natural
+          , max_tls_version : Optional Text
+          , min_tls_version : Optional Text
+          , name : Text
+          , override_host : Optional Text
+          , port : Optional Natural
+          , request_condition : Optional Text
+          , shield : Optional Text
+          , ssl_ca_cert : Optional Text
+          , ssl_cert_hostname : Optional Text
+          , ssl_check_cert : Optional Bool
+          , ssl_ciphers : Optional Text
+          , ssl_client_cert : Optional Text
+          , ssl_client_key : Optional Text
+          , ssl_hostname : Optional Text
+          , ssl_sni_hostname : Optional Text
+          , use_ssl : Optional Bool
+          , weight : Optional Natural
+          }
     , bigquerylogging :
         Optional
           ( List
@@ -632,36 +630,6 @@
             { acl_id : Optional Text
             , force_destroy : Optional Bool
             , name : Text
-            }
-        )
-  , backend =
-      None
-        ( List
-            { address : Text
-            , auto_loadbalance : Optional Bool
-            , between_bytes_timeout : Optional Natural
-            , connect_timeout : Optional Natural
-            , error_threshold : Optional Natural
-            , first_byte_timeout : Optional Natural
-            , healthcheck : Optional Text
-            , max_conn : Optional Natural
-            , max_tls_version : Optional Text
-            , min_tls_version : Optional Text
-            , name : Text
-            , override_host : Optional Text
-            , port : Optional Natural
-            , request_condition : Optional Text
-            , shield : Optional Text
-            , ssl_ca_cert : Optional Text
-            , ssl_cert_hostname : Optional Text
-            , ssl_check_cert : Optional Bool
-            , ssl_ciphers : Optional Text
-            , ssl_client_cert : Optional Text
-            , ssl_client_key : Optional Text
-            , ssl_hostname : Optional Text
-            , ssl_sni_hostname : Optional Text
-            , use_ssl : Optional Bool
-            , weight : Optional Natural
             }
         )
   , bigquerylogging =
