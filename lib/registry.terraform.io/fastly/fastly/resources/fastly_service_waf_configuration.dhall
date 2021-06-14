@@ -37,6 +37,16 @@
               , status : Text
               }
           )
+    , rule_exclusion :
+        Optional
+          ( List
+              { condition : Text
+              , exclusion_type : Text
+              , modsec_rule_ids : Optional (List Natural)
+              , name : Text
+              , number : Optional Natural
+              }
+          )
     }
 , default =
   { allowed_http_versions = None Text
@@ -74,6 +84,16 @@
             { modsec_rule_id : Natural
             , revision : Optional Natural
             , status : Text
+            }
+        )
+  , rule_exclusion =
+      None
+        ( List
+            { condition : Text
+            , exclusion_type : Text
+            , modsec_rule_ids : Optional (List Natural)
+            , name : Text
+            , number : Optional Natural
             }
         )
   }
