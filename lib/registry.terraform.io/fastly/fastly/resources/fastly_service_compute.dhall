@@ -63,6 +63,15 @@
               , timestamp_format : Optional Text
               }
           )
+    , dictionary :
+        Optional
+          ( List
+              { dictionary_id : Optional Text
+              , force_destroy : Optional Bool
+              , name : Text
+              , write_only : Optional Bool
+              }
+          )
     , domain : List { comment : Optional Text, name : Text }
     , gcslogging :
         Optional
@@ -299,6 +308,8 @@
           ( List
               { name : Text
               , tls_ca_cert : Optional Text
+              , tls_client_cert : Optional Text
+              , tls_client_key : Optional Text
               , tls_hostname : Optional Text
               , token : Optional Text
               , url : Text
@@ -385,6 +396,15 @@
             , public_key : Optional Text
             , sas_token : Optional Text
             , timestamp_format : Optional Text
+            }
+        )
+  , dictionary =
+      None
+        ( List
+            { dictionary_id : Optional Text
+            , force_destroy : Optional Bool
+            , name : Text
+            , write_only : Optional Bool
             }
         )
   , gcslogging =
@@ -619,6 +639,8 @@
         ( List
             { name : Text
             , tls_ca_cert : Optional Text
+            , tls_client_cert : Optional Text
+            , tls_client_key : Optional Text
             , tls_hostname : Optional Text
             , token : Optional Text
             , url : Text

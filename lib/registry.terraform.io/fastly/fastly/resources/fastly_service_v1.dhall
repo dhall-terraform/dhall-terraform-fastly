@@ -9,7 +9,14 @@
     , id : Optional Text
     , name : Text
     , version_comment : Optional Text
-    , acl : Optional (List { acl_id : Optional Text, name : Text })
+    , acl :
+        Optional
+          ( List
+              { acl_id : Optional Text
+              , force_destroy : Optional Bool
+              , name : Text
+              }
+          )
     , backend :
         Optional
           ( List
@@ -97,6 +104,7 @@
         Optional
           ( List
               { dictionary_id : Optional Text
+              , force_destroy : Optional Bool
               , name : Text
               , write_only : Optional Bool
               }
@@ -481,6 +489,7 @@
           ( List
               { address : Text
               , format : Optional Text
+              , format_version : Optional Natural
               , name : Text
               , placement : Optional Text
               , port : Natural
@@ -557,6 +566,8 @@
               , placement : Optional Text
               , response_condition : Optional Text
               , tls_ca_cert : Optional Text
+              , tls_client_cert : Optional Text
+              , tls_client_key : Optional Text
               , tls_hostname : Optional Text
               , token : Optional Text
               , url : Text
@@ -615,7 +626,14 @@
   , force_destroy = None Bool
   , id = None Text
   , version_comment = None Text
-  , acl = None (List { acl_id : Optional Text, name : Text })
+  , acl =
+      None
+        ( List
+            { acl_id : Optional Text
+            , force_destroy : Optional Bool
+            , name : Text
+            }
+        )
   , backend =
       None
         ( List
@@ -703,6 +721,7 @@
       None
         ( List
             { dictionary_id : Optional Text
+            , force_destroy : Optional Bool
             , name : Text
             , write_only : Optional Bool
             }
@@ -1086,6 +1105,7 @@
         ( List
             { address : Text
             , format : Optional Text
+            , format_version : Optional Natural
             , name : Text
             , placement : Optional Text
             , port : Natural
@@ -1162,6 +1182,8 @@
             , placement : Optional Text
             , response_condition : Optional Text
             , tls_ca_cert : Optional Text
+            , tls_client_cert : Optional Text
+            , tls_client_key : Optional Text
             , tls_hostname : Optional Text
             , token : Optional Text
             , url : Text
