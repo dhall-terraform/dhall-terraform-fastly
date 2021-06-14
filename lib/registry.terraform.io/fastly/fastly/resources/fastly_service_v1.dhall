@@ -579,7 +579,8 @@
     , waf :
         Optional
           ( List
-              { prefetch_condition : Optional Text
+              { disabled : Optional Bool
+              , prefetch_condition : Optional Text
               , response_object : Text
               , waf_id : Optional Text
               }
@@ -1163,7 +1164,8 @@
   , waf =
       None
         ( List
-            { prefetch_condition : Optional Text
+            { disabled : Optional Bool
+            , prefetch_condition : Optional Text
             , response_object : Text
             , waf_id : Optional Text
             }
