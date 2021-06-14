@@ -329,9 +329,9 @@
               , placement : Optional Text
               , project_id : Text
               , response_condition : Optional Text
-              , secret_key : Text
+              , secret_key : Optional Text
               , topic : Text
-              , user : Text
+              , user : Optional Text
               }
           )
     , logging_heroku :
@@ -945,9 +945,9 @@
             , placement : Optional Text
             , project_id : Text
             , response_condition : Optional Text
-            , secret_key : Text
+            , secret_key : Optional Text
             , topic : Text
-            , user : Text
+            , user : Optional Text
             }
         )
   , logging_heroku =

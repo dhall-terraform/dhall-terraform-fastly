@@ -203,9 +203,9 @@
           ( List
               { name : Text
               , project_id : Text
-              , secret_key : Text
+              , secret_key : Optional Text
               , topic : Text
-              , user : Text
+              , user : Optional Text
               }
           )
     , logging_heroku : Optional (List { name : Text, token : Text, url : Text })
@@ -537,9 +537,9 @@
         ( List
             { name : Text
             , project_id : Text
-            , secret_key : Text
+            , secret_key : Optional Text
             , topic : Text
-            , user : Text
+            , user : Optional Text
             }
         )
   , logging_heroku = None (List { name : Text, token : Text, url : Text })
