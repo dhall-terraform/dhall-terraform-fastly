@@ -72,6 +72,19 @@
               , write_only : Optional Bool
               }
           )
+    , director :
+        Optional
+          ( List
+              { backends : List Text
+              , capacity : Optional Natural
+              , comment : Optional Text
+              , name : Text
+              , quorum : Optional Natural
+              , retries : Optional Natural
+              , shield : Optional Text
+              , type : Optional Natural
+              }
+          )
     , domain : List { comment : Optional Text, name : Text }
     , gcslogging :
         Optional
@@ -387,6 +400,19 @@
             , force_destroy : Optional Bool
             , name : Text
             , write_only : Optional Bool
+            }
+        )
+  , director =
+      None
+        ( List
+            { backends : List Text
+            , capacity : Optional Natural
+            , comment : Optional Text
+            , name : Text
+            , quorum : Optional Natural
+            , retries : Optional Natural
+            , shield : Optional Text
+            , type : Optional Natural
             }
         )
   , gcslogging =
