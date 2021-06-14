@@ -369,6 +369,20 @@
               , use_tls : Optional Bool
               }
           )
+    , logging_kinesis :
+        Optional
+          ( List
+              { access_key : Text
+              , format : Optional Text
+              , format_version : Optional Natural
+              , name : Text
+              , placement : Optional Text
+              , region : Optional Text
+              , response_condition : Optional Text
+              , secret_key : Text
+              , topic : Text
+              }
+          )
     , logging_loggly :
         Optional
           ( List
@@ -953,6 +967,20 @@
             , tls_hostname : Optional Text
             , topic : Text
             , use_tls : Optional Bool
+            }
+        )
+  , logging_kinesis =
+      None
+        ( List
+            { access_key : Text
+            , format : Optional Text
+            , format_version : Optional Natural
+            , name : Text
+            , placement : Optional Text
+            , region : Optional Text
+            , response_condition : Optional Text
+            , secret_key : Text
+            , topic : Text
             }
         )
   , logging_loggly =

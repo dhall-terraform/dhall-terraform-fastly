@@ -217,6 +217,16 @@
               , use_tls : Optional Bool
               }
           )
+    , logging_kinesis :
+        Optional
+          ( List
+              { access_key : Text
+              , name : Text
+              , region : Optional Text
+              , secret_key : Text
+              , topic : Text
+              }
+          )
     , logging_loggly : Optional (List { name : Text, token : Text })
     , logging_logshuttle :
         Optional (List { name : Text, token : Text, url : Text })
@@ -523,6 +533,16 @@
             , tls_hostname : Optional Text
             , topic : Text
             , use_tls : Optional Bool
+            }
+        )
+  , logging_kinesis =
+      None
+        ( List
+            { access_key : Text
+            , name : Text
+            , region : Optional Text
+            , secret_key : Text
+            , topic : Text
             }
         )
   , logging_loggly = None (List { name : Text, token : Text })
