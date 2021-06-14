@@ -50,7 +50,9 @@
         Optional
           ( List
               { account_name : Text
+              , compression_codec : Optional Text
               , container : Text
+              , file_max_bytes : Optional Natural
               , gzip_level : Optional Natural
               , message_type : Optional Text
               , name : Text
@@ -75,6 +77,7 @@
         Optional
           ( List
               { bucket_name : Text
+              , compression_codec : Optional Text
               , email : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
@@ -134,6 +137,7 @@
           ( List
               { access_key : Text
               , bucket_name : Text
+              , compression_codec : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
               , name : Text
@@ -152,6 +156,7 @@
           ( List
               { access_key : Text
               , bucket_name : Text
+              , compression_codec : Optional Text
               , domain : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
@@ -184,6 +189,7 @@
         Optional
           ( List
               { address : Text
+              , compression_codec : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
               , name : Text
@@ -232,10 +238,11 @@
     , logging_kinesis :
         Optional
           ( List
-              { access_key : Text
+              { access_key : Optional Text
+              , iam_role : Optional Text
               , name : Text
               , region : Optional Text
-              , secret_key : Text
+              , secret_key : Optional Text
               , topic : Text
               }
           )
@@ -248,6 +255,7 @@
           ( List
               { access_key : Text
               , bucket_name : Text
+              , compression_codec : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
               , name : Text
@@ -265,6 +273,7 @@
         Optional
           ( List
               { address : Text
+              , compression_codec : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
               , name : Text
@@ -286,6 +295,7 @@
         Optional
           ( List
               { bucket_name : Text
+              , compression_codec : Optional Text
               , domain : Optional Text
               , gzip_level : Optional Natural
               , message_type : Optional Text
@@ -295,6 +305,7 @@
               , public_key : Optional Text
               , redundancy : Optional Text
               , s3_access_key : Optional Text
+              , s3_iam_role : Optional Text
               , s3_secret_key : Optional Text
               , server_side_encryption : Optional Text
               , server_side_encryption_kms_key_id : Optional Text
@@ -356,7 +367,9 @@
       None
         ( List
             { account_name : Text
+            , compression_codec : Optional Text
             , container : Text
+            , file_max_bytes : Optional Natural
             , gzip_level : Optional Natural
             , message_type : Optional Text
             , name : Text
@@ -380,6 +393,7 @@
       None
         ( List
             { bucket_name : Text
+            , compression_codec : Optional Text
             , email : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
@@ -439,6 +453,7 @@
         ( List
             { access_key : Text
             , bucket_name : Text
+            , compression_codec : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
             , name : Text
@@ -457,6 +472,7 @@
         ( List
             { access_key : Text
             , bucket_name : Text
+            , compression_codec : Optional Text
             , domain : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
@@ -489,6 +505,7 @@
       None
         ( List
             { address : Text
+            , compression_codec : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
             , name : Text
@@ -537,10 +554,11 @@
   , logging_kinesis =
       None
         ( List
-            { access_key : Text
+            { access_key : Optional Text
+            , iam_role : Optional Text
             , name : Text
             , region : Optional Text
-            , secret_key : Text
+            , secret_key : Optional Text
             , topic : Text
             }
         )
@@ -552,6 +570,7 @@
         ( List
             { access_key : Text
             , bucket_name : Text
+            , compression_codec : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
             , name : Text
@@ -569,6 +588,7 @@
       None
         ( List
             { address : Text
+            , compression_codec : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
             , name : Text
@@ -588,6 +608,7 @@
       None
         ( List
             { bucket_name : Text
+            , compression_codec : Optional Text
             , domain : Optional Text
             , gzip_level : Optional Natural
             , message_type : Optional Text
@@ -597,6 +618,7 @@
             , public_key : Optional Text
             , redundancy : Optional Text
             , s3_access_key : Optional Text
+            , s3_iam_role : Optional Text
             , s3_secret_key : Optional Text
             , server_side_encryption : Optional Text
             , server_side_encryption_kms_key_id : Optional Text
